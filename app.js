@@ -76,6 +76,10 @@ async function generateQRWithLogo(vcardData) {
 }
 
 
+app.get('/', (req, res) => { 
+    res.send('Hello, Azure! This is a Node.js application.'); 
+  }); 
+
 app.post('/generate_qr', async (req, res) => {
     try {
         const { firstname, lastname, middlename, email, phone } = req.body;
